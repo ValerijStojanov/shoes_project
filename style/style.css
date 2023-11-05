@@ -1,0 +1,356 @@
+
+
+
+
+:root {
+    --font: 'TT Travels Trl', sans-serif;
+}
+
+
+body,html {
+    background-image: url('/style/img/background.jpg');
+    background-repeat: no-repeat;
+    background-color: black;
+    width: 100%;
+    /* background-image: url('/style/img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; */
+    margin: 0;
+}
+
+header {
+    width: 100%;
+}
+
+.nav_container {
+    margin-top: 3em;
+    height: fit-content;
+
+}
+
+.navbar_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar_left_side {
+    display: flex;
+    align-items: center;
+    padding: 0em 1em 0em 1em;
+    /* border: 1px solid green; */
+
+}
+
+.ul_navbar_left_side {
+    color: white;
+    list-style: none;
+    display: flex;
+    font-family: var(--font);
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: .1em;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.ul_navbar_left_side a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+
+.navbar_middle_side {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SneakerHead_Logo {
+    position: absolute;
+    width: 60%;
+    height: 115px;
+}
+
+#liquid_glass_left {
+    position: absolute;
+    width: 167.976px;
+    height: 149.458px;
+    left: .5em;
+    transform: rotate(200.78deg) scaleX(-1);    
+}
+
+#liquid_glass_right {
+    position: absolute;
+    width: 167.976px;
+    height: 149.458px;
+    transform: rotate(10deg);
+    
+}
+
+.navbar_right_side {
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    padding: 0em 1em 0em 1em;
+}
+
+.ul_navbar_right_side {
+    color: white;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.search-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-container input {
+    border-radius: 28.5px;
+    border: 1px solid #FFF;
+    background: #0c0c0e0e;
+    width: 367px;
+    height: 57px;
+    color: white;
+    text-align: start;
+}
+
+
+.ul_second_navbar_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+    padding: 0;
+}
+
+.ul_second_navbar_content li {
+    list-style: none;
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: .1em;
+    /* border: 1px solid red; */
+}
+
+.ul_second_navbar_content a {
+    text-decoration: none;
+    color:#FFF;
+}
+
+.main_galery_container {
+    margin-top: 3em;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+}
+
+.galery_content {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    gap: 10em;
+}
+
+.left_galery, .right_galery {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#right_galery_item, #left_galery_item{
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 2%;
+    box-shadow: -1px 2px 52px 25px rgba(11,0,0,0.75);
+}
+
+  
+  #slider {
+    position: relative;
+    width: 50%;
+    height: 32vw;
+    margin: 150px auto;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+    border-radius: 12px;  /* Rounded corners */
+  }
+  
+  /* Radio buttons for slide control */
+  input[type=radio] {
+    position: relative;
+    top: 108%;
+    left: 50%;
+    width: 20px;  /* Slightly larger */
+    height: 20px;  /* Slightly larger */
+    margin: 0 15px 0 0;
+    background: #ccc;  /* Light gray */
+    border: 2px solid #ccc;  /* Light gray */
+    border-radius: 50%;  /* Rounded corners */
+    cursor: pointer;
+    transform: translateX(-83px);
+    transition: background 300ms ease, border 300ms ease;  /* Smooth transition */
+  }
+  
+  input[type=radio]:checked {
+    background: #FF5A5F;  /* Airbnb's coral red */
+    border: 2px solid #FF5A5F;  /* Airbnb's coral red */
+  }
+  
+  /* Labels and images */
+  #slider label,
+  #slider label img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;  /* Rounded corners */
+    transition: transform 400ms ease, opacity 400ms ease;  /* Added opacity transition */
+  }
+  
+  
+  #s1:checked ~ #slide1, 
+  #s2:checked ~ #slide2, 
+  #s3:checked ~ #slide3, 
+  #s4:checked ~ #slide4, 
+  #s5:checked ~ #slide5 {
+    box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+  }
+  
+  #s1:checked ~ #slide2, 
+  #s2:checked ~ #slide3, 
+  #s3:checked ~ #slide4, 
+  #s4:checked ~ #slide5, 
+  #s5:checked ~ #slide1 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(20%, 0, -100px);
+  }
+  
+  #s1:checked ~ #slide3,
+  #s2:checked ~ #slide4,
+  #s3:checked ~ #slide5,
+  #s4:checked ~ #slide1,
+  #s5:checked ~ #slide2 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(40%, 0, -250px);
+  }
+  
+  #s1:checked ~ #slide4,
+  #s2:checked ~ #slide5,
+  #s3:checked ~ #slide1,
+  #s4:checked ~ #slide2,
+  #s5:checked ~ #slide3 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(-40%, 0, -250px);
+  }
+  
+  #s1:checked ~ #slide5,
+  #s2:checked ~ #slide1,
+  #s3:checked ~ #slide2,
+  #s4:checked ~ #slide3,
+  #s5:checked ~ #slide4 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(-20%, 0, -100px);
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    
+    .navbar_content {
+        flex-direction: column;
+    }
+
+    .ul_navbar_left_side {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    }    
+    .navbar_middle_side {
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    #liquid_glass_left {
+        right: 0;
+        top: 0;
+        width: 5em;
+        height: 5em;
+    }
+
+    #liquid_glass_right {
+        left: 0;
+        top: 0;
+        width: 5em;
+        height: 5em;
+    }
+
+    #SneakerHead_Logo {
+        position: static;
+        width: 100%;
+        height: 10em;
+    }
+
+    .search-container input {
+        display: 10px;
+    }
+
+
+
+    .ul_second_navbar_content {
+        margin: 2em 0em 0em 0em;
+        flex-direction: column;
+        gap: .5em;
+    }
+
+    .ul_second_navbar_content a {
+        transition: color 0.1s ease;
+    }
+
+    .ul_second_navbar_content a:hover {
+        color: rgb(247, 247, 199);
+    }
+
+    .ul_second_navbar_content p {
+        display: none;
+    }
+
+    .navbar_right_side {
+        margin-top: 5em;
+        justify-content: center;
+    }
+
+    .galery_content {
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5em;
+    }
+
+    #right_galery_item, #left_galery_item {
+        height: 150px;
+        max-width: 100%;
+    }
+
+    #slider {
+        display: flex;
+        align-items: start;
+    }
+}
